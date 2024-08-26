@@ -268,6 +268,31 @@
   </div>
 </div>
 
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-item featured text-center">
+              <h3 class="text-center">Heroku Student</h3>
+              <img src="image/heroku.jpg" alt="HEROKU" class="img-fluid mb-3" style="height: 200px; object-fit: cover;">
+              <h4 class="text-center"><sup>Rp</sup>50.000</h4>
+              <ul class="list-unstyled ms-5">
+                <li><i class="bi bi-check"></i> <span>Aktif 2 Tahun</span></li>
+                <li><i class="bi bi-check"></i> <span>Saldo $312</span></li>
+				<li><i class="bi bi-check"></i> <span>Akun Dijamin Awet</span></li>
+                <li><i class="bi bi-check"></i> <span>Akun Owner</span></li>
+              </ul>
+              <label for="heroku-quantity-input" class="form-label text-center w-100">Jumlah Akun</label>
+    <div class="d-flex justify-content-center align-items-center mb-3">
+      <div class="input-group text-center" style="max-width: 120px;">
+        <button class="input-group-text" onclick="decrementQuantity('heroku-quantity-input')">-</button>
+        <input type="text" id="heroku-quantity-input" class="form-control text-center" value="1" min="1">
+        <button class="input-group-text" onclick="incrementQuantity('heroku-quantity-input')">+</button>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary buy-btn" onclick="updateWhatsAppLinkForHeroku()">Beli Via WhatsApp</button>
+    </div>
+  </div>
+</div>
+
 <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
   <div class="pricing-item featured">
     <h3 class="text-center">Avira Phantom VPN Pro</h3>
@@ -472,7 +497,7 @@
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>Bagaimana cara menggunakan 2FA atau MFA?</h3>
                 <div class="faq-content">
-                  <p>Untuk mendapatkan kode login 6 digit masuk ke website <a href="https://my2fa.live/" target="_blank">my2fa.live</a> dan pastekan kode yang telah diberikan ketika sudah melakukan pembelian akun.</p>
+                  <p>Untuk mendapatkan kode login 6 digit masuk ke website <a href="https://2fa.live/" target="_blank">2fa.live</a> dan pastekan kode yang telah diberikan ketika sudah melakukan pembelian akun.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -605,6 +630,11 @@
     function updateWhatsAppLinkForGhs() {
       let quantity = document.getElementById('ghs-quantity-input').value;
       let whatsappLink = `https://wa.me/6281211356037?text=Saya Mau Order%20Github Student Developer Pack%20${quantity}`;
+      window.open(whatsappLink, '_blank');
+    }
+    function updateWhatsAppLinkForHeroku() {
+      let quantity = document.getElementById('heroku-quantity-input').value;
+      let whatsappLink = `https://wa.me/6281211356037?text=Saya Mau Order%20Heroku Student%20${quantity}`;
       window.open(whatsappLink, '_blank');
     }
     function updateWhatsAppLinkForAvira() {
